@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>青青的博客</title>
+    <title>青的博客</title>
     <link>http://example.org/</link>
-    <description>Recent content on 青青的博客</description>
+    <description>Recent content on 青的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Mon, 19 Aug 2019 00:16:43 +0800</lastBuildDate>
