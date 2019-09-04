@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>青的博客</title>
-    <link>http://example.org/</link>
+    <link>http://example.com/</link>
     <description>Recent content on 青的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Wed, 04 Sep 2019 14:58:15 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>初识URL</title>
-      <link>http://example.org/posts/%E5%88%9D%E8%AF%86url/</link>
+      <link>http://example.com/posts/%E5%88%9D%E8%AF%86url/</link>
       <pubDate>Wed, 04 Sep 2019 14:58:15 +0800</pubDate>
       
-      <guid>http://example.org/posts/%E5%88%9D%E8%AF%86url/</guid>
+      <guid>http://example.com/posts/%E5%88%9D%E8%AF%86url/</guid>
       <description>URL(统一资源定位符) URL:Uniform Resource Locator 或称统一资源定位器,最初是由蒂姆·伯纳斯-李发明用来作为万维网的地址,李爵士发明的万维网就是URL+HTML+HTTP，今天介绍一下 URL 内容。
 URL 的内容 协议+域名+端口+路径+查询参数+锚点 协议： http 表示要通过 HTTP 协议来定位网络资源，http 就是协议，协议有很多，例如 FPS、HTTPs 等，协议码是什么就要严格遵守协议的内容。
 域名（IP）： host 表示合法的因特网主机域名或者 IP 地址，www.imailtone.com 就是域名，所以域名就是 IP 的别称，域名能对应多个 IP，这取决于其域名有几个服务器。
@@ -31,10 +31,10 @@ URL 的内容 协议+域名+端口+路径+查询参数+锚点 协议： http 表
     
     <item>
       <title>HTML重点标签</title>
-      <link>http://example.org/posts/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</link>
+      <link>http://example.com/posts/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</link>
       <pubDate>Sat, 31 Aug 2019 22:15:32 +0800</pubDate>
       
-      <guid>http://example.org/posts/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</guid>
+      <guid>http://example.com/posts/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</guid>
       <description>HTML 常用标签 几个很常用的标签 这里有几个常见的标签给大家介绍一下：
 a/img/iframe/table
 a 标签 &amp;lt;a href=&amp;quot;http//:google.com&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;  a 标签的作用是：  跳转到一个外部页面； 跳转到内部锚点（锚点就是跳转到具有 id 属性的标签位置，在 id 前加#即可）； 跳转到邮箱或电话；  a 标签的属性：  href:超链接，链接到一个网页。 target：意思是在那个在哪一个窗口打开超链接，有 4 个值；   _blank：在新的页面打开 _self：在当前页面打开 _top：在顶层页面打开 _parent：在父级页面打开   download:不是打开网页，而是下载网页 rel=noopener:阻止将引用着信息传递给新选项卡，可以防止网站进行跨站点的恶意攻击，提高安全性  注意：如果想要点击 a 标签，网页什么也不做只是刷新一次，只有将 href 属性设置为 js 伪协议
@@ -46,10 +46,10 @@ table 标签 结构：
     
     <item>
       <title>HTML入门笔记1</title>
-      <link>http://example.org/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
+      <link>http://example.com/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
       <pubDate>Thu, 22 Aug 2019 14:48:02 +0800</pubDate>
       
-      <guid>http://example.org/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</guid>
+      <guid>http://example.com/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</guid>
       <description> HTML 入门 HTML 是谁发明的？ 蒂莫西·约翰·伯纳斯-李爵士，英国计算机科学家。他是万维网的发明者，1990 年 12 月 25 日，他成功利用互联网实现了超文本传输协议客户端与服务器的第一次通讯
 HTML 起手应该写什么 一个完整的起手式：
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;  开头写的东西，DOCTYPE 就是文档类型的意思，这里的文档类型就是 html。lang 是语言，这里是英文， 如果想改成汉字就将“en”改为“zh-CN”。
@@ -64,19 +64,19 @@ HTML 的全局属性 class/contenteditable/hidden/id/style/tabindex/title  class
     
     <item>
       <title>开博大吉</title>
-      <link>http://example.org/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
+      <link>http://example.com/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
       <pubDate>Mon, 19 Aug 2019 00:16:43 +0800</pubDate>
       
-      <guid>http://example.org/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
+      <guid>http://example.com/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
       <description>大家好 我的博客开通了，希望能写出好文章给大家看。</description>
     </item>
     
     <item>
       <title>如何搭建一篇博客</title>
-      <link>http://example.org/posts/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</link>
+      <link>http://example.com/posts/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</link>
       <pubDate>Sun, 11 Aug 2019 11:39:57 +0800</pubDate>
       
-      <guid>http://example.org/posts/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
+      <guid>http://example.com/posts/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
       <description> 在hugo上搭建博客 终于开始写博客啦，就写写怎么搭建一个hugo博客吧  想要在hugo上搭建一篇博客，首先你要会使用github，因为我们需要GitHub Pages 来托管我们的静态页面。 当你会使用GitHub之后，进入hugo官网，按照官网的快速步骤执行，这里就不赘述了。要注意的是，如果你的网速不好，可能在git中下载不下来主题，可以直接下载zip文件放到你博客编辑目录下的themes目录内，再进入config.toml配置。 搭建博客的过程中回到很多问题，我也是一个新手，每个问题都要根据提示查询并思考，以后的学习中也应该是这样，欢迎大家来搭建hugo博客。  几个可能用到的网址：
  https://gohugo.io/getting-started/quick-start/ https://github.com/  </description>
     </item>
