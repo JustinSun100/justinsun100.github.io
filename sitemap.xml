@@ -3,21 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://sunheqing.top/posts/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/</loc>
-    <lastmod>2019-09-14T21:30:41+08:00</lastmod>
+    <loc>http://sunheqing.top/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2019-09-22T17:14:08+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sunheqing.top/posts/</loc>
-    <lastmod>2019-09-14T21:30:41+08:00</lastmod>
+    <lastmod>2019-09-22T17:14:08+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sunheqing.top/</loc>
+    <lastmod>2019-09-22T17:14:08+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://sunheqing.top/posts/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/</loc>
     <lastmod>2019-09-14T21:30:41+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
