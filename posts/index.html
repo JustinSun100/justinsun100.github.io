@@ -33,7 +33,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://sunheqing.top/posts/" />
 
-<meta property="og:updated_time" content="2019-09-22T17:14:08+08:00" />
+<meta property="og:updated_time" content="2019-10-04T21:49:40+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
@@ -114,6 +114,26 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="link black dim">
+        JS对象的基本用法
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      对象：  无序的数据集合 键值对的集合  1.声明对象的两种语法 let obj={'name':frank,'age':18}  我们通常用这种方法定义对象
+let obj=new Object{'name':frank,'age':18}  这是定义对象的标准语句，说明语句是通过Object构造函数定义的
+注意键值一定是字符串（并且会自己将其变为字符串），但是如果键值用方括号[]括起来，那么键值就是变量的值
+let p1='name'; let obj={p1:frank}; //键值是'p1' let obj={[p1]:frank}; //键值是'name'  2.如何删除对象的属性 var obj={'name':'frank','age':18}  删除对象的属性，看一下下面两种方法
+obj.name=undefined //将name属性设为undefined，name属性存在，删除属性值 delete obj.name //将name属性删除，删除属性名  3.如何查看对象的属性 查看自身所有属性 Object keys(obj); //打出所有的键值 Object values(obj); //打出所有的属性值 Object entries(obj); //以数组形式打出所有的键值对  查看自身+共有属性 console.dir(obj); obj.__proto__ //不推荐  判断一个属性是自身还是共有属性 obj.hasOwnProperty('toString') //false  查看属性的值： 1. obj['name']; //新人推荐使用 2. obj.name； //熟练后使用  obj[name]是错误的写法，因为[name]是变量。
+4.如何修改或添加对象的属性 直接赋值 let obj={name:'frank'} obj.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="link black dim">
         JavaScript的基本语法
       </a>
@@ -175,30 +195,6 @@ NaN是作为一个数值，表示该数值超出了解释器的理解，其又�
 8.数组和对象的区分
 9.== 和 ===
 两者都表示等于，前者会自动转换类型，这样就会变声一些奇怪的结果，所以推荐一直使用“===”
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/css%E9%87%8D%E7%82%B9%E7%9F%A5%E8%AF%86/" class="link black dim">
-        Css重点知识
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      css简介 css就是层叠样式表(英文全称：Cascading Style Sheets)。它可以静态的修饰网页，css不仅可以将样式层叠起来，还可以配合各种脚本语言动态地对网页各元素进行格式化。css的创造在web历史上非常重要。
-css的历史 1990年，李爵士发明了Web。1994年，Web真正走出实验室。从HTML被发明开始，样式就以各种形式存在。不同的浏览器结合它们各自的样式语言为用户提供页面效果的控制。最初的HTML只包含很少的显示属性。随着HTML的成长，为了满足页面设计者的要求，HTML添加了很多显示功能。但是随着这些功能的增加，HTML变的越来越杂乱，而且HTML页面也越来越臃肿。于是CSS便诞生了。他是由李爵士的同时赖先生（Hakon Wium Lie）提出的。1996年发表了css1，到目前为止已经发展到了css3。之后的版本的是分模块升级的。
-css丰富的样式 CSS现在的功能非常强大，甚至可以制作动画，一个网页有很多元素，要有HTML、CSS等，然后经过浏览器渲染，才能展现出来我都可以认可的网页，所以CSS有着丰富的样式，这样才能满足我们用户的视觉需求。
-浏览器渲染原理  根据HTML构建HTML树 根据css构建css树 将两棵树合并成一颗渲染树 layout布局（文档流，盒摸型，计算大小） paint绘制（把边框颜色，背景，阴影画出来） Composite合成（根据层叠关系展示画面）  css动画（例子:制作一颗小红心) 有两种方法:
- 用transform,hover制作一颗小红心  transform示例
- 用animation制作一颗小红心  animation示例
-更新样式，一般用js更新样式 有三种更新方式：
- 第一种（全走）  div.remove()，过程4，5，6都要走一遍
- 第二种，跳过layout  改变背景颜色
- 第三种，只需要composite  改变transform，只需改变composite
     </div>
   </div>
 </div>
