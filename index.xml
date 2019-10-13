@@ -6,10 +6,28 @@
     <description>Recent content on 青的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Fri, 04 Oct 2019 21:49:40 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 22:40:04 +0800</lastBuildDate>
     
 	<atom:link href="http://sunheqing.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Js函数的执行时机</title>
+      <link>http://sunheqing.top/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</link>
+      <pubDate>Fri, 11 Oct 2019 22:40:04 +0800</pubDate>
+      
+      <guid>http://sunheqing.top/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</guid>
+      <description>js函数 函数分类  具名函数
+function fn(x,y){ return x+y }  匿名函数
+let a=function(x,y){ return x+y }  箭头函数
+let f1=x=&amp;gt;x*x	//一句可以省略花括号 let f2=(x,y)=&amp;gt;{ console.log(x) return x+y }	//两个参数必须用括号括起来，两行语句要用花括号括起来，两行语句以上return是不能省略的  构造函数
+let f =new Function(&#39;x&#39;,&#39;y&#39;,&#39;return x+y&#39;)	//Function就是构造函数    所有函数都是Function构造出来的 包括Object、Array、Function  调用时机 函数必须调用才会执行
+调用时机很重要，时机不同，结果不同
+例子1 let i=0; for(i=0;i&amp;lt;6;i++){ setTimeout(()=&amp;gt;{ console.log(i) },0) }  这段代码执行的结果是6个6 为什么是6个6呢？ 我们分析一下，按照我们的逻辑来看应该是0，1，2，3，4，5啊
+原因：setTimeout是定时器，意思时设定一个时间再执行，这里定时器的时间是0ms，但是 实际是定时器还是有时间的，这段代码表达的意思是，做完手头的事情以后再马上执行定时器，所以当for循环完成之后，马上执行定时器里面的内容，所以是当i循环到6之后再执行定时器，所以就在控制台上打出来了6个6
+例子2 for(let i=0;i&amp;lt;6;i++){ setTimeout(()=&amp;gt;{ console.log(i) },0) }  这段代码的结果是0，1，2，3，4，5
+在我们看来这两段代码是一样的啊，为什么结果不一样呢？ 原因：在上一个例子中i是全局变量。所以i只有一个所以它会一直被加到6才会执行，而在第二个例子中let i让每次循环都创建了一个i所以就有6个i这样当计时器执行的时候，i就等于0，1，2，3，4，5</description>
+    </item>
     
     <item>
       <title>JS对象的基本用法</title>
