@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>青的博客  | 开博大吉</title>
+    <title>青的博客  | 浅析MVC</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.57.1" />
     
@@ -25,26 +25,44 @@
 
     
 
-    <meta property="og:title" content="开博大吉" />
-<meta property="og:description" content="大家好 我的博客开通了，希望能写出好文章给大家看。" />
+    <meta property="og:title" content="浅析MVC" />
+<meta property="og:description" content="MVC 是一种架构设计模式 1、MVC 的三个对象分别是做什么的  M-model(数据模型)，负责操作所有的数据 V-view(视图)，负责所有的 UI 界面 C-controller(控制器)，负责其他  2、EventBus 有哪些 API，是做什么用的 EventBus 是用来对象间通信的
+EventBus 的 API
+ EventBus.on-&gt;监听事件 EventBus.trigger-&gt;触发事件 EventBus.off-&gt;
+update(){ eventBus.trigger(x) } eventBus.on(x,function)   3、表驱动编程是做什么的  表驱动编程是一种编程模式，从表里面查找信息而不是使用重复的语句和复杂的逻辑语句，当复杂度较低的情况时，用逻辑语句更简洁，但如果复杂度较高，使用表驱动编程无疑能节省很多的空间。
+ 表里里可以存数据，也可以存指令，或函数对象等都可以。
+  4、总结 好的代码总是将复杂的逻辑以分层的方式降低单个层次上的复杂度。复杂与简单有一个相互转化的过程。
+模块化能让代码清晰起来，每个模块互不干扰，无论是自己修改还是别人修改都是有利的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://sunheqing.top/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/" />
-<meta property="article:published_time" content="2019-08-19T00:16:43+08:00" />
-<meta property="article:modified_time" content="2019-08-19T00:16:43+08:00" />
-<meta itemprop="name" content="开博大吉">
-<meta itemprop="description" content="大家好 我的博客开通了，希望能写出好文章给大家看。">
+<meta property="og:url" content="http://sunheqing.top/posts/%E6%B5%85%E6%9E%90mvc/" />
+<meta property="article:published_time" content="2020-02-12T15:52:26+08:00" />
+<meta property="article:modified_time" content="2020-02-12T15:52:26+08:00" />
+<meta itemprop="name" content="浅析MVC">
+<meta itemprop="description" content="MVC 是一种架构设计模式 1、MVC 的三个对象分别是做什么的  M-model(数据模型)，负责操作所有的数据 V-view(视图)，负责所有的 UI 界面 C-controller(控制器)，负责其他  2、EventBus 有哪些 API，是做什么用的 EventBus 是用来对象间通信的
+EventBus 的 API
+ EventBus.on-&gt;监听事件 EventBus.trigger-&gt;触发事件 EventBus.off-&gt;
+update(){ eventBus.trigger(x) } eventBus.on(x,function)   3、表驱动编程是做什么的  表驱动编程是一种编程模式，从表里面查找信息而不是使用重复的语句和复杂的逻辑语句，当复杂度较低的情况时，用逻辑语句更简洁，但如果复杂度较高，使用表驱动编程无疑能节省很多的空间。
+ 表里里可以存数据，也可以存指令，或函数对象等都可以。
+  4、总结 好的代码总是将复杂的逻辑以分层的方式降低单个层次上的复杂度。复杂与简单有一个相互转化的过程。
+模块化能让代码清晰起来，每个模块互不干扰，无论是自己修改还是别人修改都是有利的">
 
 
-<meta itemprop="datePublished" content="2019-08-19T00:16:43&#43;08:00" />
-<meta itemprop="dateModified" content="2019-08-19T00:16:43&#43;08:00" />
-<meta itemprop="wordCount" content="2">
+<meta itemprop="datePublished" content="2020-02-12T15:52:26&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-12T15:52:26&#43;08:00" />
+<meta itemprop="wordCount" content="30">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="开博大吉"/>
-<meta name="twitter:description" content="大家好 我的博客开通了，希望能写出好文章给大家看。"/>
+<meta name="twitter:title" content="浅析MVC"/>
+<meta name="twitter:description" content="MVC 是一种架构设计模式 1、MVC 的三个对象分别是做什么的  M-model(数据模型)，负责操作所有的数据 V-view(视图)，负责所有的 UI 界面 C-controller(控制器)，负责其他  2、EventBus 有哪些 API，是做什么用的 EventBus 是用来对象间通信的
+EventBus 的 API
+ EventBus.on-&gt;监听事件 EventBus.trigger-&gt;触发事件 EventBus.off-&gt;
+update(){ eventBus.trigger(x) } eventBus.on(x,function)   3、表驱动编程是做什么的  表驱动编程是一种编程模式，从表里面查找信息而不是使用重复的语句和复杂的逻辑语句，当复杂度较低的情况时，用逻辑语句更简洁，但如果复杂度较高，使用表驱动编程无疑能节省很多的空间。
+ 表里里可以存数据，也可以存指令，或函数对象等都可以。
+  4、总结 好的代码总是将复杂的逻辑以分层的方式降低单个层次上的复杂度。复杂与简单有一个相互转化的过程。
+模块化能让代码清晰起来，每个模块互不干扰，无论是自己修改还是别人修改都是有利的"/>
 
   </head>
 
@@ -118,18 +136,57 @@
           
         POSTS
       </p>
-      <h1 class="f1 athelas mb1">开博大吉</h1>
+      <h1 class="f1 athelas mb1">浅析MVC</h1>
       
-      <time class="f6 mv4 dib tracked" datetime="2019-08-19T00:16:43&#43;08:00">August 19, 2019</time>
+      <time class="f6 mv4 dib tracked" datetime="2020-02-12T15:52:26&#43;08:00">February 12, 2020</time>
       
       
     </header>
 
     <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
 
-<h1 id="大家好">大家好</h1>
+<h1 id="mvc-是一种架构设计模式">MVC 是一种架构设计模式</h1>
 
-<p>我的博客开通了，希望能写出好文章给大家看。</p>
+<h3 id="1-mvc-的三个对象分别是做什么的">1、MVC 的三个对象分别是做什么的</h3>
+
+<ul>
+<li>M-model(数据模型)，负责操作所有的数据</li>
+<li>V-view(视图)，负责所有的 UI 界面</li>
+<li>C-controller(控制器)，负责其他</li>
+</ul>
+
+<h3 id="2-eventbus-有哪些-api-是做什么用的">2、EventBus 有哪些 API，是做什么用的</h3>
+
+<p><strong>EventBus 是用来对象间通信的</strong></p>
+
+<p>EventBus 的 API</p>
+
+<ul>
+<li>EventBus.on-&gt;监听事件</li>
+<li>EventBus.trigger-&gt;触发事件</li>
+
+<li><p>EventBus.off-&gt;</p>
+
+<pre><code>update(){
+eventBus.trigger(x)
+}
+eventBus.on(x,function)
+</code></pre></li>
+</ul>
+
+<h3 id="3-表驱动编程是做什么的">3、表驱动编程是做什么的</h3>
+
+<ul>
+<li><p>表驱动编程是一种编程模式，从表里面查找信息而不是使用重复的语句和复杂的逻辑语句，当复杂度较低的情况时，用逻辑语句更简洁，但如果复杂度较高，使用表驱动编程无疑能节省很多的空间。</p></li>
+
+<li><p>表里里可以存数据，也可以存指令，或函数对象等都可以。</p></li>
+</ul>
+
+<h3 id="4-总结">4、总结</h3>
+
+<p>好的代码总是将复杂的逻辑以分层的方式降低单个层次上的复杂度。复杂与简单有一个相互转化的过程。</p>
+
+<p>模块化能让代码清晰起来，每个模块互不干扰，无论是自己修改还是别人修改都是有利的</p>
 <ul class="pa0">
   
 </ul>

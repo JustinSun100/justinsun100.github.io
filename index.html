@@ -33,7 +33,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://sunheqing.top/" />
 
-<meta property="og:updated_time" content="2019-11-07T13:27:06+08:00" />
+<meta property="og:updated_time" content="2020-02-12T15:52:26+08:00" />
 <meta itemprop="name" content="青的博客">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
@@ -140,6 +140,36 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/%E6%B5%85%E6%9E%90mvc/" class="color-inherit dim link">
+            浅析MVC
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          MVC 是一种架构设计模式 1、MVC 的三个对象分别是做什么的  M-model(数据模型)，负责操作所有的数据 V-view(视图)，负责所有的 UI 界面 C-controller(控制器)，负责其他  2、EventBus 有哪些 API，是做什么用的 EventBus 是用来对象间通信的
+EventBus 的 API
+ EventBus.on-&gt;监听事件 EventBus.trigger-&gt;触发事件 EventBus.off-&gt;
+update(){ eventBus.trigger(x) } eventBus.on(x,function)   3、表驱动编程是做什么的  表驱动编程是一种编程模式，从表里面查找信息而不是使用重复的语句和复杂的逻辑语句，当复杂度较低的情况时，用逻辑语句更简洁，但如果复杂度较高，使用表驱动编程无疑能节省很多的空间。
+ 表里里可以存数据，也可以存指令，或函数对象等都可以。
+  4、总结 好的代码总是将复杂的逻辑以分层的方式降低单个层次上的复杂度。复杂与简单有一个相互转化的过程。
+模块化能让代码清晰起来，每个模块互不干扰，无论是自己修改还是别人修改都是有利的
+        </div>
+          <a href="/posts/%E6%B5%85%E6%9E%90mvc/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/jquery%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" class="color-inherit dim link">
             JQuery基本原理
             </a>
@@ -165,45 +195,18 @@ $(&quot;p&quot;).after($(&quot;div&quot;));  这两种方法是有区别的,第�
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="color-inherit dim link">
-            Js函数的执行时机
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          js函数 函数分类  具名函数
-function fn(x,y){ return x+y }  匿名函数
-let a=function(x,y){ return x+y }  箭头函数
-let f1=x=&gt;x*x	//一句可以省略花括号 let f2=(x,y)=&gt;{ console.log(x) return x+y }	//两个参数必须用括号括起来，两行语句要用花括号括起来，两行语句以上return是不能省略的  构造函数
-let f =new Function('x','y','return x+y')	//Function就是构造函数    所有函数都是Function构造出来的 包括Object、Array、Function  调用时机 函数必须调用才会执行
-调用时机很重要，时机不同，结果不同
-例子1 let i=0; for(i=0;i&lt;6;i++){ setTimeout(()=&gt;{ console.log(i) },0) }  这段代码执行的结果是6个6 为什么是6个6呢？ 我们分析一下，按照我们的逻辑来看应该是0，1，2，3，4，5啊
-原因：setTimeout是定时器，意思时设定一个时间再执行，这里定时器的时间是0ms，但是 实际是定时器还是有时间的，这段代码表达的意思是，做完手头的事情以后再马上执行定时器，所以当for循环完成之后，马上执行定时器里面的内容，所以是当i循环到6之后再执行定时器，所以就在控制台上打出来了6个6
-例子2 for(let i=0;i&lt;6;i++){ setTimeout(()=&gt;{ console.log(i) },0) }  这段代码的结果是0，1，2，3，4，5
-在我们看来这两段代码是一样的啊，为什么结果不一样呢？ 原因：在上一个例子中i是全局变量。所以i只有一个所以它会一直被加到6才会执行，而在第二个例子中let i让每次循环都创建了一个i所以就有6个i这样当计时器执行的时候，i就等于0，1，2，3，4，5
-        </div>
-          <a href="/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="link black dim">
+              Js函数的执行时机
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="link black dim">
@@ -223,12 +226,6 @@ let f =new Function('x','y','return x+y')	//Function就是构造函数    所有
             </a>
           </h2>
         
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/css%E9%87%8D%E7%82%B9%E7%9F%A5%E8%AF%86/" class="link black dim">
-              Css重点知识
-            </a>
-          </h2>
-        
 
         
         
@@ -244,7 +241,7 @@ let f =new Function('x','y','return x+y')	//Function就是构造函数    所有
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://sunheqing.top/" >
-    &copy; 2019 青的博客
+    &copy; 2020 青的博客
   </a>
     <div>
 
