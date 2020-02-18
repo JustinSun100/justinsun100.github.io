@@ -33,7 +33,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://sunheqing.top/" />
 
-<meta property="og:updated_time" content="2020-02-12T15:52:26+08:00" />
+<meta property="og:updated_time" content="2020-02-18T10:40:13+08:00" />
 <meta itemprop="name" content="青的博客">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
@@ -140,6 +140,35 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/vue%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%E5%8F%8A%E7%89%88%E6%9C%AC%E5%8C%BA%E5%88%AB/" class="color-inherit dim link">
+            Vue搭建项目及版本区别
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          如何搭建一个 Vue 项目 使用 @vue/cli 搭建项目  安装@vue/cli
+yarn global add @vue/cli  通过vue &ndash;version命令来验证有没有安装成功
+ 创建项目
+vue create 项目名 yarn serve //预览服务   在创建项目时有一些选项根据自己的需求选择，也可以在codesandbox 中创建项目,然后将项目下载下来。
+使用 codesandebox 搭建项目：  进入网址codesandbox ，这里要注意不能登录，因为登录之后就只能创建 50 个项目，不登陆可以一直创建 点击创建一个 vue 项目  导出项目，这里导出的时压缩文件，解压后就是我们的项目了   好了我们已经成功创建好项目了，下面介绍一下版本的区别
+版本区别 完整版 Vue.js  可以直接在 html 和 template 标签中得到视图内容 对于初学者而言更清晰易懂  非完整版 Vue.runtime.js  不能直接从 html 或 template 得到视图要用 js 构建视图 代码体积小，大概为完整版的 70%，节省了空间 通过 render 函数将数据渲染到视图中  注意：
+        </div>
+          <a href="/posts/vue%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%E5%8F%8A%E7%89%88%E6%9C%AC%E5%8C%BA%E5%88%AB/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/%E6%B5%85%E6%9E%90mvc/" class="color-inherit dim link">
             浅析MVC
             </a>
@@ -162,45 +191,18 @@ update(){ eventBus.trigger(x) } eventBus.on(x,function)   3、表驱动编程是
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/jquery%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" class="color-inherit dim link">
-            JQuery基本原理
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          jQuery jQuery 毫无疑问是 JS 历史上最经典的 js 库，直至今日，很多网站依然在使用 jQuery 它的许多思想值得我们开发者学习，但是想要掌握它也并不容易，经典的思想有哪些呢？
-一、jQuery 如何获取元素 要知道 jQuery 是一个封装起来的库，简写就是\$()，获取想要操作的元素，通过选择表达式
-例如：
-$(&quot;#test&quot;); //获取id为test的元素 $(&quot;div.demo&quot;); //获取类名为class的div元素 $(&quot;tr:odd&quot;); //选择表格的奇数行（jQuery特有的选择式） $(&quot;div:gt(2)&quot;); // 选择所有的div元素，除了前三个（jQuery特有的选择式）  二、jQuery 的链式操作是怎么样的 jQuery 设计思想之一，就是最终选中网页元素以后，以链条的形式写出来并操作，原因是：
- jQuery 是一个特殊的函数 jQuery 的返回值是一个对象
-$(&quot;div&quot;) .find(&quot;p&quot;) .eq(2) .html(&quot;Hello&quot;); //由于返回值是一个对象所以就可以在对象上继续操作   三、jQuery 如何创建元素 创建元素非常的简单只需要将元素直接传如 jQuery 的构造函数中就可以例如：
-$(&quot;&lt;div&gt;创建一个新的div&lt;/div&gt;&quot;); //创建一个新的div $(&quot;ul.first&quot;).append.$(&quot;&lt;li&gt;new li&lt;/li&gt;&quot;); //创建一个新的li插入class为first的ul中  四、如何移动元素 想把一个元素移动到另一个元素前面有两种方法。
-第一种方法是 insertAfter()，把 div 元素移动 p 元素后面。
-$(&quot;div&quot;).insertAfter($(&quot;p&quot;));  第二种方法是 after()，把 p 元素加到 div 元素前面。
-$(&quot;p&quot;).after($(&quot;div&quot;));  这两种方法是有区别的,第一种方法返回的是 div 元素，第二种方法返回的是 p 元素
-        </div>
-          <a href="/posts/jquery%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/posts/jquery%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" class="link black dim">
+              JQuery基本原理
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="link black dim">
@@ -217,12 +219,6 @@ $(&quot;p&quot;).after($(&quot;div&quot;));  这两种方法是有区别的,第�
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="link black dim">
               JavaScript的基本语法
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/" class="link black dim">
-              JavaScript的诞生
             </a>
           </h2>
         
