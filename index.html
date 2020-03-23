@@ -33,7 +33,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://sunheqing.top/" />
 
-<meta property="og:updated_time" content="2020-02-18T10:40:13+08:00" />
+<meta property="og:updated_time" content="2020-03-23T10:05:47+08:00" />
 <meta itemprop="name" content="青的博客">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
@@ -140,6 +140,35 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/vue%E4%B9%8B.sync%E4%BF%AE%E9%A5%B0%E7%AC%A6/" class="color-inherit dim link">
+            Vue之.sync修饰符
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          修饰符 Vue 中有许多修饰符，分为下面几类：
+ 表单修饰符 事件修饰符 鼠标按键修饰符 键值修饰符  .sync 修饰符 .sync 修饰符是一个比较特殊的修饰符，它不属于以上四种，是 Vue2.3.0 新推出修饰符。
+我们会经常遇见这种情况，我们要在子组件中修改一个值，但是由于这个值是一个外部数据，更方便的方法是双向绑定，但是我们知道 Vue2.0 实际上是单向绑定，所以我们只能监听这个值，然后再将这个值传参给原数据所在组件。
+//父组件中 &lt;Children :money=&quot;total&quot; @update:money=&quot;total = $event&quot; /&gt; //js data() {return {total: 1000};},  //子组件中 &lt;button @click=&quot;$emit('update:money', money-100)&quot;&gt;花钱&lt;/button&gt; //js props: [&quot;money&quot;]  看这个例子，父组件中声明了数据 money，子组件使用了父组件的外部数据，子组件不能直接更新外部数据，所以通过$emit事件监听，当update:money事件被触发时将money-100的值传给$event,这样就可以修改外部数据 money 的值了。
+由于这种写法很复杂，又很常用到，所以便有了.sync 修饰符
+&lt;Children :money=&quot;total&quot; @update:money=&quot;total = $event&quot; /&gt; &lt;Children :money.sync=&quot;total&quot;/&gt; //这两条语句是完全等价的  使用.sync 须知  使用 .sync 的时候，子组件传递的事件名必须为 update:value，其中 value 必须与子组件中 props 中声明的名称完全一致(如上例中的 myMessage，不能使用 my-message) 如果一个组件的多个 prop 都要实现双向绑定，那么可以使用 v-bind.
+        </div>
+          <a href="/posts/vue%E4%B9%8B.sync%E4%BF%AE%E9%A5%B0%E7%AC%A6/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/vue%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%E5%8F%8A%E7%89%88%E6%9C%AC%E5%8C%BA%E5%88%AB/" class="color-inherit dim link">
             Vue搭建项目及版本区别
             </a>
@@ -161,42 +190,18 @@ vue create 项目名 yarn serve //预览服务   在创建项目时有一些选�
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/%E6%B5%85%E6%9E%90mvc/" class="color-inherit dim link">
-            浅析MVC
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          MVC 是一种架构设计模式 1、MVC 的三个对象分别是做什么的  M-model(数据模型)，负责操作所有的数据 V-view(视图)，负责所有的 UI 界面 C-controller(控制器)，负责其他  2、EventBus 有哪些 API，是做什么用的 EventBus 是用来对象间通信的
-EventBus 的 API
- EventBus.on-&gt;监听事件 EventBus.trigger-&gt;触发事件 EventBus.off-&gt;
-update(){ eventBus.trigger(x) } eventBus.on(x,function)   3、表驱动编程是做什么的  表驱动编程是一种编程模式，从表里面查找信息而不是使用重复的语句和复杂的逻辑语句，当复杂度较低的情况时，用逻辑语句更简洁，但如果复杂度较高，使用表驱动编程无疑能节省很多的空间。
- 表里里可以存数据，也可以存指令，或函数对象等都可以。
-  4、总结 好的代码总是将复杂的逻辑以分层的方式降低单个层次上的复杂度。复杂与简单有一个相互转化的过程。
-模块化能让代码清晰起来，每个模块互不干扰，无论是自己修改还是别人修改都是有利的
-        </div>
-          <a href="/posts/%E6%B5%85%E6%9E%90mvc/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/posts/%E6%B5%85%E6%9E%90mvc/" class="link black dim">
+              浅析MVC
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/posts/jquery%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" class="link black dim">
@@ -213,12 +218,6 @@ update(){ eventBus.trigger(x) } eventBus.on(x,function)   3、表驱动编程是
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="link black dim">
               JS对象的基本用法
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="link black dim">
-              JavaScript的基本语法
             </a>
           </h2>
         

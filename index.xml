@@ -6,10 +6,24 @@
     <description>Recent content on 青的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 18 Feb 2020 10:40:13 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 10:05:47 +0800</lastBuildDate>
     
 	<atom:link href="http://sunheqing.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue之.sync修饰符</title>
+      <link>http://sunheqing.top/posts/vue%E4%B9%8B.sync%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
+      <pubDate>Mon, 23 Mar 2020 10:05:47 +0800</pubDate>
+      
+      <guid>http://sunheqing.top/posts/vue%E4%B9%8B.sync%E4%BF%AE%E9%A5%B0%E7%AC%A6/</guid>
+      <description>修饰符 Vue 中有许多修饰符，分为下面几类：
+ 表单修饰符 事件修饰符 鼠标按键修饰符 键值修饰符  .sync 修饰符 .sync 修饰符是一个比较特殊的修饰符，它不属于以上四种，是 Vue2.3.0 新推出修饰符。
+我们会经常遇见这种情况，我们要在子组件中修改一个值，但是由于这个值是一个外部数据，更方便的方法是双向绑定，但是我们知道 Vue2.0 实际上是单向绑定，所以我们只能监听这个值，然后再将这个值传参给原数据所在组件。
+//父组件中 &amp;lt;Children :money=&amp;quot;total&amp;quot; @update:money=&amp;quot;total = $event&amp;quot; /&amp;gt; //js data() {return {total: 1000};},  //子组件中 &amp;lt;button @click=&amp;quot;$emit(&#39;update:money&#39;, money-100)&amp;quot;&amp;gt;花钱&amp;lt;/button&amp;gt; //js props: [&amp;quot;money&amp;quot;]  看这个例子，父组件中声明了数据 money，子组件使用了父组件的外部数据，子组件不能直接更新外部数据，所以通过$emit事件监听，当update:money事件被触发时将money-100的值传给$event,这样就可以修改外部数据 money 的值了。
+由于这种写法很复杂，又很常用到，所以便有了.sync 修饰符
+&amp;lt;Children :money=&amp;quot;total&amp;quot; @update:money=&amp;quot;total = $event&amp;quot; /&amp;gt; &amp;lt;Children :money.sync=&amp;quot;total&amp;quot;/&amp;gt; //这两条语句是完全等价的  使用.sync 须知  使用 .sync 的时候，子组件传递的事件名必须为 update:value，其中 value 必须与子组件中 props 中声明的名称完全一致(如上例中的 myMessage，不能使用 my-message) 如果一个组件的多个 prop 都要实现双向绑定，那么可以使用 v-bind.</description>
+    </item>
     
     <item>
       <title>Vue搭建项目及版本区别</title>
